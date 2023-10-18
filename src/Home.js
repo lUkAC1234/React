@@ -1,21 +1,15 @@
 import { useState } from "react";
+import BlogList from "./BlogList";
 const Home = () => {
-    const [name, setName] = useState('React Ninja')
-    const [age, setAge] = useState(15)
-
-    const handleClick = () => {
-       setName('React Ninja Changed !');
-    }
-
-    const handleClickAge = () => {
-        setAge(20);
-    }
+    const [blogs, setBlogs] = useState([
+        { title: 'First Blog', body: 'The body of first blog', author: 'First', id: 1 },
+        { title: 'Second Blog', body: 'The body of Second blog', author: 'Second', id: 2 },
+        { title: 'Third Blog', body: 'The body of Third blog', author: 'Third', id: 3 },
+    ]);
     return ( 
         <div className="home">
             <h1>Home Page</h1>
-            <p>{ name } { age }</p>
-            <button className="clickBtn" onClick={handleClick}>Click Me !</button>
-            <button className="clickBtn" onClick={handleClickAge}>Click Me Again !</button>
+            <BlogList blogs={blogs} title="All Blogs !"/>
         </div>
     );
 }

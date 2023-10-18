@@ -53,3 +53,39 @@ body {
 .clickBtn:nth-child(odd) {
   background: #202020;
 }
+
+.blog {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 3rem;
+}
+
+.blog h2 {
+  color: #8828FF;
+  font-size: 2rem;
+  margin-block: 1rem;
+}
+
+.blog-column {
+  box-shadow: 0 0 1rem 0 rgb(0, 0, 0, 0.1);
+  padding: 0.5rem;
+  width: 30rem;
+  border-radius: 0.5rem;
+  flex-grow: 1;
+}
+
+.blog-column:nth-child(odd) {
+  background: #8828FF;
+}
+
+.blog-column:nth-child(odd) h1,
+.blog-column:nth-child(odd) p  {
+  color: #fff;
+}
+
+
+.blog-column h1 {
+  color: #8828FF;
+  font-size: 1.5rem;
+}
